@@ -4,3 +4,11 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
+
+plugins {     
+	id 'java-library' 
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['commons-csv-1.6.jar']) 
+}
