@@ -5,10 +5,27 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
+version = '1.0'
+
+ 
 plugins {     
 	id 'java-library' 
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['commons-csv-1.6.jar']) 
+}
+
+jar {
+
+	manifest {
+
+  attributes	'Main-Class': 'csci2020u.lab03',
+
+      'Implementation-Title': 'Lab 3',
+
+      'Implementation-Version': version
+
+	}
+
 }
